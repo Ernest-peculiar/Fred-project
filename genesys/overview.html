@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+      <div class="logo">
+        <img class="fredlogo" src="pictures/Group 1.png" alt="Fred Logo" />
+        <span>Fred</span>
+      </div>
+      <ul class="nav">
+        <li class="nav-item active">
+          <a href="overview.html"><i class="fas fa-chart-pie"></i> Overview</a>
+        </li>
+        <li class="nav-item">
+          <a href="attendance.html"
+            ><i class="fas fa-calendar-check"></i> Attendance</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="lecturers.html"
+            ><i class="fas fa-graduation-cap"></i> Lecturers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="department.html"
+            ><i class="fas fa-building"></i> Department</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main content area for this page -->
+    <div class="main-content">
+      <div class="overview-header">
+        <div class="header-right">
+          <i class="fas fa-bell"></i>
+          <i class="fas fa-cog"></i>
+          <img
+            class="profile-img"
+            src="pictures/Group 7091.png"
+            alt="Profile"
+          />
+        </div>
+      </div>
+
+      <div class="overview-section">
+        <div class="overview-left">
+          <h1 class="ov">Overview</h1>
+          <p>
+            Good morning, Admin. Here is a quick snapshot of your school today.
+          </p>
+        </div>
+
+        <div class="date-box">
+          <img class="misc" src="pictures/Misc icon@2x.png" alt="" />
+          <div class="date-texts">
+            <span class="date-title">Today's Date</span>
+            <span class="date-value" id="todayDate">April 14, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chai">
+        <div class="first">
+          <div class="inner">
+            <div class="totalnumber">
+              <p>Total number of students</p>
+              <img class="src" src="pictures/Circle Icon Bagde.png" alt="" />
+            </div>
+            <div class="twenty">
+              <div class="std">
+                <h1 class="tousand">23,000</h1>
+                <p>students</p>
+              </div>
+              <div class="badge">
+                <img src="pictures/Badge.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="first">
+          <div class="inner">
+            <div class="totalnumber">
+              <p>Attendance Percentage</p>
+              <img
+                class="src"
+                src="pictures/Circle Icon Bagde (1).png"
+                alt=""
+              />
+            </div>
+            <div class="twenty">
+              <div class="std">
+                <h1 class="tousand">87%</h1>
+                <p>University Wide</p>
+              </div>
+              <div class="badge">
+                <img src="pictures/Badge (1).png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="first">
+          <div class="inner">
+            <div class="totalnumber">
+              <p>Total Classes Held</p>
+              <img
+                class="src"
+                src="pictures/Circle Icon Bagde (2).png"
+                alt=""
+              />
+            </div>
+            <div class="twenty">
+              <div class="std">
+                <h1 class="tousand">250</h1>
+                <p>below 75% attendance</p>
+              </div>
+              <div class="badge">
+                <img src="pictures/Badge (2).png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="first">
+          <div class="inner">
+            <div class="totalnumber">
+              <p>Absent Rate</p>
+              <img
+                class="src"
+                src="pictures/Circle Icon Bagde (3).png"
+                alt=""
+              />
+            </div>
+            <div class="twenty">
+              <div class="std">
+                <h1 class="tousand">92%</h1>
+                <p>Attendance</p>
+              </div>
+              <div class="badge">
+                <img src="pictures/Badge.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="containp">
+        <img class="imgcont" src="pictures/Container.png" alt="" />
+      </div>
+
+      <div class="containp">
+        <img class="imgcont" src="pictures/Frame 2147224656 (2).png" alt="" />
+      </div>
+    </div>
+
+    <script>
+      // Automatically set the active class based on the current URL
+      const navItems = document.querySelectorAll(".nav-item a");
+      navItems.forEach((item) => {
+        if (item.href === window.location.href) {
+          item.parentElement.classList.add("active");
+        }
+      });
+
+      const date = new Date();
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("todayDate").textContent =
+        date.toLocaleDateString("en-US", options);
+    </script>
+  </body>
+</html>

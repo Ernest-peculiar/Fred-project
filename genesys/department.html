@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+      <div class="logo">
+        <img class="fredlogo" src="pictures/Group 1.png" alt="Fred Logo" />
+        <span>Fred</span>
+      </div>
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="overview.html"><i class="fas fa-chart-pie"></i> Overview</a>
+        </li>
+        <li class="nav-item">
+          <a href="attendance.html"
+            ><i class="fas fa-calendar-check"></i> Attendance</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="lecturers.html"
+            ><i class="fas fa-graduation-cap"></i> Lecturers</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a href="department.html"
+            ><i class="fas fa-building"></i> Department</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main content area for this page -->
+    <div class="main-content">
+      <h1>Department</h1>
+      <p>Welcome to the Department section!</p>
+      <!-- You can add your department-related content here -->
+    </div>
+
+    <script>
+      // Automatically set the active class based on the current URL
+      const navItems = document.querySelectorAll(".nav-item a");
+      navItems.forEach((item) => {
+        if (item.href === window.location.href) {
+          item.parentElement.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>

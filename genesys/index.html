@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- other links and CSS here -->
+
+    <meta charset="UTF-8" />
+    <title>Fixed Side Nav</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button class="hamburger" id="hamburgerBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="sidebar" id="sidebar">
+      <div class="logo">
+        <img class="fredlogo" src="pictures/Group 1.png" alt="Fred Logo" />
+        <span>Fred</span>
+      </div>
+
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="overview.html"><i class="fas fa-chart-pie"></i> Overview</a>
+        </li>
+        <li class="nav-item">
+          <a href="attendance.html"
+            ><i class="fas fa-calendar-check"></i> Attendance</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="lecturers.html"
+            ><i class="fas fa-graduation-cap"></i> Lecturers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="department.html"
+            ><i class="fas fa-building"></i> Department</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a href="department.html"><i class="fas fa-building"></i> Logout</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main content area where the content will change -->
+    <div class="main-content" id="main-content">
+      <h1>Welcome!</h1>
+      <p>Select an option from the sidebar to see content.</p>
+    </div>
+
+    <script>
+      const navItems = document.querySelectorAll(".nav-item");
+      const mainContent = document.getElementById("main-content");
+
+      // Change active class when an item is clicked
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          // Remove 'active' class from all items
+          navItems.forEach((i) => i.classList.remove("active"));
+          // Add 'active' class to clicked item
+          item.classList.add("active");
+
+          // Update content based on the clicked item
+          switch (item.id) {
+            case "overview":
+              mainContent.innerHTML = `
+                <h1>Overview</h1>
+                <p>Welcome to the Overview section!</p>
+              `;
+              break;
+            case "attendance":
+              mainContent.innerHTML = `
+                <h1>Attendance</h1>
+                <p>Hello World! This is the Attendance section.</p>
+              `;
+              break;
+            case "lecturers":
+              mainContent.innerHTML = `
+                <h1>Lecturers</h1>
+                <p>Here you can manage Lecturers.</p>
+              `;
+              break;
+            case "department":
+              mainContent.innerHTML = `
+                <h1>Department</h1>
+                <p>Welcome to the Department section.</p>
+              `;
+              break;
+            default:
+              mainContent.innerHTML = `
+                <h1>Welcome!</h1>
+                <p>Select an option from the sidebar to see content.</p>
+              `;
+              break;
+          }
+        });
+      });
+
+      // Hamburger menu toggle (for mobile)
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const sidebar = document.getElementById("sidebar");
+
+      hamburgerBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
