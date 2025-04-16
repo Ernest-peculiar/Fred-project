@@ -42,7 +42,11 @@
     <!-- Main content area for this page -->
     <div class="main-content">
       <div class="overview-header">
-        <input type="search" placeholder="search" class="search" />
+        <input
+          type="search"
+          placeholder="search for Students, lectures, Courses"
+          class="search"
+        />
         <div class="header-right">
           <i class="fas fa-bell"></i>
           <i class="fas fa-cog"></i>
@@ -154,28 +158,301 @@
         </div>
       </div>
 
-      <div class="containp">
-        <img class="imgcont" src="pictures/Container.png" alt="" />
+      <div class="thislife">
+        <div class="trend-dashboard">
+          <div class="dashboard-header">
+            <div class="header-title-section">
+              <h2>Attendance Key Trend</h2>
+              <div class="trend-legend">
+                <div class="legend-entry">
+                  <span class="trend-indicator"></span>
+                  <span>Month-on-Month</span>
+                </div>
+                <div class="legend-entry">
+                  <span class="projection-indicator"></span>
+                  <span>Projected Month</span>
+                </div>
+              </div>
+            </div>
+            <div class="date-display">
+              <img
+                src="public/lovable-uploads/13bf6f7b-5445-4e2d-8a91-45153ecc7e92.png"
+                alt="Calendar icon"
+                class="date-icon"
+              />
+              <span>13th Jan, 2025</span>
+            </div>
+          </div>
+
+          <div class="visualization-container">
+            <div class="percentage-axis">
+              <div class="percentage-label"><span>100%</span></div>
+              <div class="percentage-label"><span>80%</span></div>
+              <div class="percentage-label"><span>60%</span></div>
+              <div class="percentage-label"><span>40%</span></div>
+              <div class="percentage-label"><span>20%</span></div>
+              <div class="percentage-label"><span>0%</span></div>
+            </div>
+
+            <div class="graph-section">
+              <div class="graph-grid">
+                <div class="horizontal-gridline"></div>
+                <div class="horizontal-gridline"></div>
+                <div class="horizontal-gridline"></div>
+                <div class="horizontal-gridline"></div>
+                <div class="horizontal-gridline"></div>
+                <div class="horizontal-gridline"></div>
+              </div>
+
+              <div class="graph-plot">
+                <div class="projection-area"></div>
+                <div class="trend-line-plot"></div>
+                <div class="data-marker" style="left: 25%; top: 35%">
+                  <div class="marker-tooltip">
+                    <div class="tooltip-header">Wednesday</div>
+                    <div class="tooltip-content">Percentage: 60%</div>
+                  </div>
+                </div>
+                <div class="exam-marker" style="left: 50%; top: 18%">
+                  <div class="exam-tooltip">
+                    <div>Exam Date</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="weekday-axis">
+                <div class="weekday-label">Mondays</div>
+                <div class="weekday-label">Tuesdays</div>
+                <div class="weekday-label">Wednesday</div>
+                <div class="weekday-label">Thursdays</div>
+                <div class="weekday-label">Fridays</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="attendance-card">
+          <div class="card-header">
+            <h3>Attendance by Dept</h3>
+            <div class="department-select">
+              <select>
+                <option value="computer-sc">Computer Sc.</option>
+                <option value="electrical">Electrical</option>
+                <option value="mechanical">Mechanical</option>
+                <option value="civil">Civil</option>
+              </select>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="chart-container">
+              <div class="y-axis">
+                <div class="y-label"><span>100%</span></div>
+                <div class="y-label"><span>80%</span></div>
+                <div class="y-label"><span>60%</span></div>
+                <div class="y-label"><span>40%</span></div>
+                <div class="y-label"><span>20%</span></div>
+                <div class="y-label"><span>0%</span></div>
+              </div>
+              <div class="chart-bars">
+                <div class="chart-grid">
+                  <div class="grid-line"></div>
+                  <div class="grid-line"></div>
+                  <div class="grid-line"></div>
+                  <div class="grid-line"></div>
+                  <div class="grid-line grid-line-dark"></div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar" style="height: 85%"></div>
+                  <div class="x-label">Mon</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar" style="height: 65%"></div>
+                  <div class="x-label">Tue</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar" style="height: 75%"></div>
+                  <div class="x-label">Wed</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar" style="height: 42%"></div>
+                  <div class="x-label">Thur</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar" style="height: 85%"></div>
+                  <div class="x-label">Fri</div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-buttons">
+              <button>100L</button>
+              <button>200L</button>
+              <button>300L</button>
+              <button>400L</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="containp">
-        <img class="imgcont" src="pictures/Frame 2147224656 (2).png" alt="" />
+       <div class="container">
+      <div class="top-controls">
+        <div class="left">
+          <input
+            type="text"
+            placeholder="Search for students, lecturers, or courses "
+          />
+          <select>
+            <option>Timeframe</option>
+          </select>
+          <select>
+            <option>Dept/Course</option>
+          </select>
+          <select>
+            <option>Percentage</option>
+          </select>
+        </div>
+        <button>Export ⬇</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Attendance Rate %</th>
+            <th>Classes Attended</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Student 1 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="student-info">
+                <img src="https://i.pravatar.cc/36?img=1" alt="" />
+                <div>
+                  Ezekiel Olayiwola<br />
+                  <span class="email">olivia@untitledui.com</span>
+                </div>
+              </div>
+            </td>
+            <td>2020/SC/162234</td>
+            <td>
+              90%
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </td>
+            <td>140/160</td>
+            <td>...</td>
+          </tr>
+
+          <!-- Student 2 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="student-info">
+                <img src="https://i.pravatar.cc/36?img=2" alt="" />
+                <div>
+                  Malcolm Johnson<br />
+                  <span class="email">olivia@untitledui.com</span>
+                </div>
+              </div>
+            </td>
+            <td>2020/SC/162234</td>
+            <td>
+              80%
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </td>
+            <td>140/160</td>
+            <td>...</td>
+          </tr>
+
+          <!-- Student 3 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="student-info">
+                <img src="https://i.pravatar.cc/36?img=3" alt="" />
+                <div>
+                  David Thompson<br />
+                  <span class="email">olivia@untitledui.com</span>
+                </div>
+              </div>
+            </td>
+            <td>2020/SC/162234</td>
+            <td>
+              70%
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </td>
+            <td>140/160</td>
+            <td>...</td>
+          </tr>
+
+          <!-- Student 4 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="student-info">
+                <img src="https://i.pravatar.cc/36?img=4" alt="" />
+                <div>
+                  Olivia Parker<br />
+                  <span class="email">olivia@untitledui.com</span>
+                </div>
+              </div>
+            </td>
+            <td>2020/SC/162234</td>
+            <td>
+              69%
+              <div class="progress-bar">
+                <div class="progress" style="width: 69%"></div>
+              </div>
+            </td>
+            <td>140/160</td>
+            <td>...</td>
+          </tr>
+
+          <!-- Student 5 -->
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <div class="student-info">
+                <img src="https://i.pravatar.cc/36?img=5" alt="" />
+                <div>
+                  Okonkwo Jude<br />
+                  <span class="email">okonwokojude@google.com</span>
+                </div>
+              </div>
+            </td>
+            <td>2020/SC/162234</td>
+            <td>
+              60%
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+            </td>
+            <td>140/160</td>
+            <td>...</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button>&larr; Previous</button>
+        <div class="pages">
+          <span class="current">1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>...</span>
+          <span>10</span>
+        </div>
+        <button>Next &rarr;</button>
       </div>
     </div>
-
-    <script>
-      // Automatically set the active class based on the current URL
-      const navItems = document.querySelectorAll(".nav-item a");
-      navItems.forEach((item) => {
-        if (item.href === window.location.href) {
-          item.parentElement.classList.add("active");
-        }
-      });
-
-      const date = new Date();
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      document.getElementById("todayDate").textContent =
-        date.toLocaleDateString("en-US", options);
-    </script>
   </body>
 </html>
