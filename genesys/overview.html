@@ -275,6 +275,10 @@
                   <div class="bar" style="height: 42%"></div>
                   <div class="x-label">Thur</div>
                 </div>
+                <div class="bar-container">
+                  <div class="bar" style="height: 85%"></div>
+                  <div class="x-label">Fri</div>
+                </div>
               </div>
             </div>
             <div class="filter-buttons">
@@ -286,9 +290,247 @@
           </div>
         </div>
       </div>
+      <div class="stsrter">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Top 5 Faculty Attendance</h3>
+            <button class="filter-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+                ></polygon>
+              </svg>
+            </button>
+          </div>
+
+          <div class="card-continent">
+            <!-- Donut Chart -->
+            <div class="donut-chart">
+              <svg width="100%" height="100%" viewBox="0 0 100 100">
+                <!-- Create the donut chart segments -->
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke="#333333"
+                  stroke-width="20"
+                  stroke-dasharray="201 50"
+                  stroke-dashoffset="0"
+                  transform="rotate(-90 50 50)"
+                ></circle>
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke="#3366CC"
+                  stroke-width="20"
+                  stroke-dasharray="173 78"
+                  stroke-dashoffset="-201"
+                  transform="rotate(-90 50 50)"
+                ></circle>
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke="#22C55E"
+                  stroke-width="20"
+                  stroke-dasharray="126 125"
+                  stroke-dashoffset="-374"
+                  transform="rotate(-90 50 50)"
+                ></circle>
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke="#F87171"
+                  stroke-width="20"
+                  stroke-dasharray="113 138"
+                  stroke-dashoffset="-500"
+                  transform="rotate(-90 50 50)"
+                ></circle>
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="transparent"
+                  stroke="#F59E0B"
+                  stroke-width="20"
+                  stroke-dasharray="100 151"
+                  stroke-dashoffset="-613"
+                  transform="rotate(-90 50 50)"
+                ></circle>
+                <circle cx="50" cy="50" r="30" fill="white"></circle>
+              </svg>
+            </div>
+
+            <!-- Legend -->
+            <div class="legend">
+              <div class="legend-item">
+                <div class="legend-color-name">
+                  <div
+                    class="legend-color"
+                    style="background-color: #333333"
+                  ></div>
+                  <span class="legend-name">Basic Medical sci</span>
+                </div>
+                <span class="legend-value">80%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color-name">
+                  <div
+                    class="legend-color"
+                    style="background-color: #3366cc"
+                  ></div>
+                  <span class="legend-name">Law faculty</span>
+                </div>
+                <span class="legend-value">69%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color-name">
+                  <div
+                    class="legend-color"
+                    style="background-color: #22c55e"
+                  ></div>
+                  <span class="legend-name">Education Faculty</span>
+                </div>
+                <span class="legend-value">50%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color-name">
+                  <div
+                    class="legend-color"
+                    style="background-color: #f87171"
+                  ></div>
+                  <span class="legend-name">Physical Science</span>
+                </div>
+                <span class="legend-value">45%</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color-name">
+                  <div
+                    class="legend-color"
+                    style="background-color: #f59e0b"
+                  ></div>
+                  <span class="legend-name">Life Sciences</span>
+                </div>
+                <span class="legend-value">40%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="leaderboard-card">
+          <div class="leaderboard-header">
+            <h2 class="leaderboard-title">
+              Attendance leaderboard (Top 5 Department)
+            </h2>
+            <div class="filter-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+                ></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <ul class="leaderboard-list">
+            <li class="leaderboard-item">
+              <div class="rank">1</div>
+              <div class="department">Med & surgery</div>
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill progress-fill-1"></div>
+                </div>
+              </div>
+              <div class="percentage">92%</div>
+            </li>
+
+            <li class="leaderboard-item">
+              <div class="rank">2</div>
+              <div class="department">Law</div>
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill progress-fill-2"></div>
+                </div>
+              </div>
+              <div class="percentage">89%</div>
+            </li>
+
+            <li class="leaderboard-item">
+              <div class="rank">3</div>
+              <div class="department">Anatomy</div>
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill progress-fill-3"></div>
+                </div>
+              </div>
+              <div class="percentage">72%</div>
+            </li>
+
+            <li class="leaderboard-item">
+              <div class="rank">4</div>
+              <div class="department">Computer sci</div>
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill progress-fill-4"></div>
+                </div>
+              </div>
+              <div class="percentage">61%</div>
+            </li>
+
+            <li class="leaderboard-item">
+              <div class="rank">5</div>
+              <div class="department">Mass com</div>
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill progress-fill-5"></div>
+                </div>
+              </div>
+              <div class="percentage">55%</div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <script>
+      // Optional JavaScript for interactivity
+      document.querySelectorAll(".legend-item").forEach((item, index) => {
+        item.addEventListener("mouseenter", () => {
+          document
+            .querySelectorAll("circle")
+            [index].setAttribute("stroke-width", "22");
+        });
+
+        item.addEventListener("mouseleave", () => {
+          document
+            .querySelectorAll("circle")
+            [index].setAttribute("stroke-width", "20");
+        });
+      });
+
       // Automatically set the active class based on the current URL
       const navItems = document.querySelectorAll(".nav-item a");
       navItems.forEach((item) => {
